@@ -13,6 +13,8 @@
 # JUnit
 JUnit은 이름에서 정직하게 명시하고 있듯, Java로 구현된 프로그램에 단위 테스트를 하기 위해 작성된 프레임워크라 할 수 있다.
 
+해당 챕터에서는 Spring Framework에서 JUnit가 어떤 방식으로 사용되는지를 중점으로 기술한다.
+
 ## 왜 쓰는가?
 단위 테스트가 꼭 JUnit과 같은 도구가 필요한 것은 아니다. 
 
@@ -24,4 +26,40 @@ JUnit은 이름에서 정직하게 명시하고 있듯, Java로 구현된 프로
 이에 JUnit은 프레임워크라는 말에 알맞듯, 많은 부분이 모듈화, 표준화 되어 있어 일관적인 테스트 패턴을 만들 수 있도록 개발자에게 유도하며, 결과 값, 테스트 통계 등을 쉽게 확인할 수 있는 기능까지도 포함하고 있다. 
 
 ## 사용하기
-Spring Framework에서 JUnit을 잘 사용하기 
+Spring에서 특정 `@Component`, `@Controller`등의 모듈에 Test를 사용하기 위해서는 일반적으로 `src` 디렉토리를 기준으로 `test` 디렉토리와 `main` 디렉토리의 구조를 동일하게 하며 테스트 대상 클래스에 `Test`키워드를 붙여 명명한다.
+
+예를 들어 아래와 같은 느낌으로 생성하는 것이다.
+
+```
+src
+  |-- main
+      |-- com.java.somepackage.controller
+          |-- HelloWorldController
+  |-- test
+      |-- com.java.somepackage.controller
+          |-- HelloWorldControllerTest
+```
+
+###  @SpringBootTest vs @WebMvcTest
+
+준비가 되었다면 해당 테스트할 클래스에 @WebMvcTest 어노테이션이나, @SpringBootTest 어노테이션을 추가한다.
+
+두 어노테이션 간에는 용도에서 서로간 차이가 있다.
+
+* `@WebMvcTest`는 클래스에서 사용하는 것 중 `@Controller`, `@ControllerAdvice`, `@JsonComponent` 등 Web MVC에서 사용하는 의존성만을 가져온다.
+* `@SpringBootTest`는 사용자가 추가한 모든 의존성을 로드한다. `@Component`, `@Service`,  `@Repository` 등의 어노테이션을 추가한 클래스의 인스턴스를 테스트하거나, 테스트 클래스에서 사용해야 할 경우, 해당 어노테이션을 사용한다.
+
+
+### @Test
+`@Test`어노테이션은 메서드에 붙는 어노테이션으로 해당 메서드가 테스트 메서드임을 알려주는 어노테이션이라 볼 수 있다. 
+
+```java
+@SpringBootTest
+public HelloWorldTest {
+    @Test
+    void A_더하기_B_는_3_인가(){
+        int 
+    }
+}
+```
+
