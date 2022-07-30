@@ -97,9 +97,15 @@ DB의 경우 특정 메서드가 조회하거나 가져오는 시간이 굉장�
 
 이 떄 테스트에서는 테스트하기 애매하지만, 정해진 값, 즉 개발자가 의도한 결과값을 담는 Mock(가짜, 모의 객체라고도 한다)객체를 활용할 수 있다.
 
-또한 위에 설명한 것처럼 기존 메서드가 있음에도 이를 호출하지 않고, 대신 호출하게 되는 메서드를 Stub라고 한다.
+또한 위에 설명한 것처럼 기존 메서드가 있음에도 이를 호출하지 않고, 대신 호출하게 되는 메서드를 Stub라고 한다. 
 
+# Test in Spring Boot
+Spring에서는 `spring-boot-starter-test` 라는 의존성을 추가해줌으로써 테스트를 쉽게 할 수 있는 스타터를 제공하고 있다. 이 모듈에는 앞서 기술한 JUnit 뿐 아니라 웬만한 Java계열에서 사용하는 테스트 라이브러리들이 모여있다.
+
+## Annotations
+Spring에서 테스트를 쉽게 
 
 # Reference
+* https://blog.neonkid.xyz/218
 * [MangKyu's Diary - JUnit과 Mockito 기반의 Spring 단위 테스트 코드 작성법 (2/3)](https://mangkyu.tistory.com/144)
 * [MangKyu's Diary - JUnit과 Mockito 기반의 Spring 단위 테스트 코드 작성법 (3/3)](https://mangkyu.tistory.com/145)
