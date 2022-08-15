@@ -38,5 +38,6 @@
 [Description](https://wonit.tistory.com/470)
 
 ## QueryDSL
-
-[Descriotion](https://ykh6242.tistory.com/107)
+[Description_1](https://ykh6242.tistory.com/entry/QueryDSL1-QueryDSL%EA%B3%BC-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95?category=981344)
+[Description_2](https://ykh6242.tistory.com/107)
+[Description_3](https://ykh6242.tistory.com/entry/QueryDSL3-%ED%94%84%EB%A1%9C%EC%A0%9D%EC%85%98-distinct-%EB%8F%99%EC%A0%81-%EC%BF%BC%EB%A6%AC-%EB%B2%8C%ED%81%AC-%EC%97%B0%EC%82%B0?category=981344)
