@@ -10,7 +10,7 @@
 
 ## AWS ECS Layer
 
-![ecs-layer](.\img\ecs-layer.PNG)
+![ecs-layer](./img/ecs-layer.PNG)
 
 - Capacity Options: 컨테이너가 실행되는 인프라
 - Controller: 컨테이너에서 실행되는 애플리케이션 배포 및 관리
